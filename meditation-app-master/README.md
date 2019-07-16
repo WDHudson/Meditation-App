@@ -1,2 +1,1 @@
-# meditation-app
-Meditation app tutorial
+Worked on a meditation app to test HTML, CSS, and JavaScript
