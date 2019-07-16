@@ -1,5 +1,3 @@
-// tEsT
-
 const app = () => {
   const song = document.querySelector(".song");
   const play = document.querySelector(".play");
@@ -32,6 +30,7 @@ const app = () => {
     sound.addEventListener("click", function() {
       song.src = this.getAttribute("data-sound")
       video.src = this.getAttribute("data-video")
+      checkPlaying(song);
     })
   })
 
@@ -44,8 +43,8 @@ const app = () => {
   // Select Sound
   timeSelect.forEach(option => {
     option.addEventListener("click", function() {
-      fakeDuration = this.getAttribute("data-time")
-      timeDisplay.textConcent = "${Math.floor(fakeDuration / 60)}:${Math.floor(fakeDuration % 60)}"
+      fakeDuration = this.getAttribute("data-time");
+      timeDisplay.textContent = `${Math.floor(fakeDuration / 60)}:${Math.floor(fakeDuration % 60)}`
     });
   });
 
